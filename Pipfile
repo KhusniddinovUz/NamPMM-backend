@@ -8,6 +8,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 django = "*"
 pillow = "*"
+django-unfold = "*"
 
 [dev-packages]
 
