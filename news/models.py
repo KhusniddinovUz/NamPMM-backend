@@ -5,6 +5,7 @@ from django.utils.text import slugify
 class Article(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(blank=True, unique=True, max_length=255)
+    main_news = models.BooleanField(default=False, blank=True, null=True)
     body = models.TextField()
     image = models.ImageField(upload_to='articles/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
