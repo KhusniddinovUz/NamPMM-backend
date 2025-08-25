@@ -14,7 +14,9 @@ SECRET_KEY = 'django-insecure-z2j+pvn#$)-8ex3q#@u2(1gdn$z_4^a)=gvj@-51mqbx=rf*m4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.1.7'
+]
 
 
 # Application definition
@@ -75,6 +77,11 @@ DATABASES = {
 }
 
 
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%Y-%m-%d %H:%M'
+}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -107,8 +114,11 @@ USE_TZ = True
 
 
 CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.7:5173",
     "http://localhost:5173",
 ]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 MEDIA_URL = '/media/'
