@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.generics import RetrieveAPIView
 from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 from .models import Article
 from .serializers import ArticleSerializer
 
@@ -11,11 +12,6 @@ class ArticleViewSet(ReadOnlyModelViewSet):
     lookup_field = "slug"
     search_fields = ["title", "body"]
     ordering_fields = ["created_at", "title"]
-
-    # def get_queryset(self):
-    #     qs = Article.objects.order_by("-created_at")
-    #     # convert queryset to list, then repeat it 3 times
-    #     return list(qs) * 3
 
 class HomepageArticlesViewSet(ReadOnlyModelViewSet):
     serializer_class = ArticleSerializer
@@ -36,3 +32,11 @@ class SingleArticleViewSet(RetrieveAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     lookup_field = "slug"
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.view_count += 1
+        instance.save(update_fields=["view_count"])
+
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
