@@ -79,7 +79,9 @@ DATABASES = {
 
 
 REST_FRAMEWORK = {
-    'DATETIME_FORMAT': '%Y-%m-%d %H:%M'
+    'DATETIME_FORMAT': '%Y-%m-%d %H:%M',
+    "DEFAULT_THROTTLE_CLASSES": ["rest_framework.throttling.ScopedRateThrottle"],
+    "DEFAULT_THROTTLE_RATES": {"contact": "1/minute"},
 }
 
 
@@ -132,3 +134,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# EMAIL
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'saidbek24m@gmail.com'
+EMAIL_HOST_PASSWORD = 'nvzm rudh oglu rdiw'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+CONTACT_RECIPIENTS = ["murodkhujaevs@gmail.com", "zeronidev@gmail.com"]
+
+
