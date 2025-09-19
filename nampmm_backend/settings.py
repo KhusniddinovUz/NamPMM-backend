@@ -15,7 +15,9 @@ SECRET_KEY = 'django-insecure-z2j+pvn#$)-8ex3q#@u2(1gdn$z_4^a)=gvj@-51mqbx=rf*m4
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.1.7'
+    '192.168.1.7',
+    "mahoratmarkaz.uz",
+    "localhost"
 ]
 
 
