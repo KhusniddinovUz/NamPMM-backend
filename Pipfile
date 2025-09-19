@@ -9,6 +9,7 @@ django-cors-headers = "*"
 django = "*"
 pillow = "*"
 django-unfold = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
