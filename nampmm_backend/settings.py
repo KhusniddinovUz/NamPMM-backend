@@ -18,7 +18,7 @@ ALLOWED_HOSTS = [
     '192.168.1.7',
     "mahoratmarkaz.uz",
     "localhost",
-    "portal.mahoratmarkaz.uz"
+    "api2.mahoratmarkaz.uz"
 ]
 
 
