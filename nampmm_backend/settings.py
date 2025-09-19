@@ -129,6 +129,14 @@ CORS_ALLOWED_ORIGINS = [
     "https://mahoratmarkaz.uz",
     "https://api2.mahoratmarkaz.uz",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://api2.mahoratmarkaz.uz",
+    "https://www.api2.mahoratmarkaz.uz",
+    "https://mahoratmarkaz.uz",
+    "http://localhost:5173",
+    "http://192.168.1.7:5173",
+]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
 
