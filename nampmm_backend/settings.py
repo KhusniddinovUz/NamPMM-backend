@@ -122,6 +122,7 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://192.168.1.7:5173",
     "http://localhost:5173",
+    "https://mahoratmarkaz.uz",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
