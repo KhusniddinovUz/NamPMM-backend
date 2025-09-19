@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-z2j+pvn#$)-8ex3q#@u2(1gdn$z_4^a)=gvj@-51mqbx=rf*m4
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.1.7'
+    '192.168.1.7',
+    '127.0.0.1',
 ]
 
 
@@ -119,6 +120,7 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://192.168.1.7:5173",
     "http://localhost:5173",
+    "https://mahoratmarkaz.uz",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
