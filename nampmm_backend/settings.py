@@ -16,7 +16,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.1.7',
-    '127.0.0.1',
+    "mahoratmarkaz.uz",
+    "localhost",
+    "portal.mahoratmarkaz.uz"
 ]
 
 
@@ -120,7 +122,6 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://192.168.1.7:5173",
     "http://localhost:5173",
-    "https://mahoratmarkaz.uz",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
